@@ -50,7 +50,7 @@ func handleConnection(conn net.Conn) {
 }
 
 func processSocketData(data []byte) {
-	var event shared.sessionevent
+	var event shared.SessionEvent
 	err := json.Unmarshal(data, &event)
 	if err != nil {
 		fmt.Println("Error unmarshalling JSON:", err)
@@ -61,7 +61,7 @@ func processSocketData(data []byte) {
 	sendToQueue(event)
 }
 
-func sendToQueue(event shared.sessionevent) {
+func sendToQueue(event shared.SessionEvent) {
 	// Implementation to send event to ActiveMQ Artemis queue
 }
 
