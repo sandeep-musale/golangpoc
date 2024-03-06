@@ -1,3 +1,3 @@
-module github.com/sandeep-musale/golangpoc/shared
+module shared-module
 
 go 1.22.1
