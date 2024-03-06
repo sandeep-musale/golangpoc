@@ -5,11 +5,12 @@ import (
 	"encoding/xml"
 	"fmt"
 	"os"
-
-	"github.com/yourusername/project/shared-module"
+	"time"
+	
+	"github.com/sandeep-musale/golangpoc/shared-module"
 )
 
-func writeXMLFile(filename string, event shared.sessionevent) error {
+func writeXMLFile(filename string, event shared.SessionEvent) error {
 	file, err := os.Create(filename)
 	if err != nil {
 		return err
@@ -28,10 +29,10 @@ func writeXMLFile(filename string, event shared.sessionevent) error {
 
 func main() {
 	// Example usage
-	event := shared.sessionevent{
-		LIID:      "123",
-		CIN:       "456",
-		StartDate: time.Now().UTC(),
+	event := shared.SessionEvent{
+		liid:      "123",
+		cin:       "456",
+		startdate: time.Now().UTC(),
 	}
 
 	err := writeXMLFile("output.xml", event)

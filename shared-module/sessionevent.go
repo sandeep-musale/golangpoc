@@ -3,7 +3,7 @@ package shared
 import "time"
 
 type SessionEvent struct {
-	liid string
-	cin string
-	startdate time.Time
+	LIID string
+	CIN string
+	StartDate time.Time
 }

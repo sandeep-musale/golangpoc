@@ -15,6 +15,7 @@ const (
 )
 
 func startSocketServer() {
+	fmt.Println("Starting socket server")
 	listener, err := net.Listen("tcp", ":"+SimulatorSocketPort)
 	if err != nil {
 		fmt.Println("Error starting socket server:", err)
