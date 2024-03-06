@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net"
-	"time"
 
 	"github.com/sandeep-musale/golangpoc/shared-module"
 )
@@ -51,7 +50,7 @@ func handleConnection(conn net.Conn) {
 }
 
 func processSocketData(data []byte) {
-	var event shared.MCSessionEvent
+	var event shared.sessionevent
 	err := json.Unmarshal(data, &event)
 	if err != nil {
 		fmt.Println("Error unmarshalling JSON:", err)
@@ -62,7 +61,7 @@ func processSocketData(data []byte) {
 	sendToQueue(event)
 }
 
-func sendToQueue(event shared.MCSessionEvent) {
+func sendToQueue(event shared.sessionevent) {
 	// Implementation to send event to ActiveMQ Artemis queue
 }
 

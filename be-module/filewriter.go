@@ -9,7 +9,7 @@ import (
 	"github.com/yourusername/project/shared-module"
 )
 
-func writeXMLFile(filename string, event shared.MCSessionEvent) error {
+func writeXMLFile(filename string, event shared.sessionevent) error {
 	file, err := os.Create(filename)
 	if err != nil {
 		return err
@@ -28,7 +28,7 @@ func writeXMLFile(filename string, event shared.MCSessionEvent) error {
 
 func main() {
 	// Example usage
-	event := shared.MCSessionEvent{
+	event := shared.sessionevent{
 		LIID:      "123",
 		CIN:       "456",
 		StartDate: time.Now().UTC(),

@@ -3,6 +3,6 @@ module github.com/sandeep-musale/golangpoc/be-module
 go 1.22.1
 
 require (
-     github.com/sandeep-musale/golangpoc/shared-module 89842d959e1554bc019e5b7d4baf7bf776e22016
+     github.com/sandeep-musale/golangpoc/shared-module d93a0acbf61c7d0c50756fa5a0cfc9d7fc03cb98
     // Add other dependencies as needed
 )

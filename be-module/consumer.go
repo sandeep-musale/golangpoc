@@ -12,8 +12,8 @@ func startConsumer() {
 }
 
 func processQueueMessage(message []byte) {
-	var event shared.MCSessionEvent
-	// Unmarshal message to MCSessionEvent
+	var event shared.sessionevent
+	// Unmarshal message to sessionevent
 	// ...
 
 	// Write to Oracle DB
@@ -23,11 +23,11 @@ func processQueueMessage(message []byte) {
 	createXMLFile(event)
 }
 
-func writeToOracleDB(event shared.MCSessionEvent) {
+func writeToOracleDB(event shared.sessionevent) {
 	// Implementation to write to Oracle DB
 }
 
-func createXMLFile(event shared.MCSessionEvent) {
+func createXMLFile(event shared.sessionevent) {
 	// Implementation to create XML file
 }
 
